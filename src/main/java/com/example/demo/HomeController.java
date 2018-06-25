@@ -9,7 +9,7 @@ public class HomeController {
 
     @RequestMapping("/")
     public String homePage() {
-        return "redirect:/addmovie";
+        return "index";
     }
 
     @GetMapping("/addmovie")
@@ -20,7 +20,7 @@ public class HomeController {
     }
 
     @PostMapping("/addmovie")
-    public String saveForm(@ModelAttribute("aSong") Movie movie, Model model)
+    public String saveForm(@ModelAttribute("movie") Movie movie, Model model)
     {
         model.addAttribute("movie", movie);
         return "confirmmovie";
