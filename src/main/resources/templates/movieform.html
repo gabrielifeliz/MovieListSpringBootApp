@@ -15,18 +15,26 @@
         <div class="form-group">
             <label for="title">Title:</label>
             <input type="text" th:field="*{title}" class="form-control">
+            <span th:if="${#fields.hasErrors('title')}"
+                  th:errors="*{title}"></span>
         </div>
         <div class="form-group">
             <label for="year">Year:</label>
             <input type="text" th:field="*{releaseYear}" class="form-control">
+            <span th:if="${#fields.hasErrors('year')}"
+                  th:errors="*{year}"></span>
         </div>
         <div class="form-group">
             <label for="plot">Plot:</label>
             <textarea cols="30" rows="10" th:field="*{plot}" class="form-control"></textarea>
+            <span th:if="${#fields.hasErrors('plot')}"
+                  th:errors="*{plot}"></span>
         </div>
         <div class="form-group">
             <label for="director">Director:</label>
             <input type="text" th:field="*{director}" class="form-control">
+            <span th:if="${#fields.hasErrors('director')}"
+                  th:errors="*{director}"></span>
         </div>
         <button type="submit" class="btn btn-primary">Save Movie</button>
     </form>

@@ -1,0 +1,13 @@
+body {
+    background: url("/img/movie_theater.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    background:rgba(255,255,255,0.9);
+}
+
+label {
+    font-weight: bold;
+}

@@ -27,9 +27,9 @@ public class Movie {
     @Size(min = 1, max = 140)
     private String plot;
 
-    @NotNull
-    @Size(min = 4)
-    private int releaseYear;
+    @NotEmpty
+    @Size(max = 4)
+    private String releaseYear;
 
     public long getId() {
         return id;
@@ -63,11 +63,11 @@ public class Movie {
         this.plot = plot;
     }
 
-    public int getReleaseYear() {
+    public String getReleaseYear() {
         return releaseYear;
     }
 
-    public void setReleaseYear(int releaseYear) {
+    public void setReleaseYear(String releaseYear) {
         this.releaseYear = releaseYear;
     }
 
