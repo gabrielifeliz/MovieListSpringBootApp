@@ -36,24 +36,24 @@ public class HomeController {
     }
 
     @RequestMapping("/showmovies")
-    public String showPeople(Model model) {
+    public String showMovies(Model model) {
         model.addAttribute("movies", movieRepository.findAll());
         return "listmovies";
     }
 
     @RequestMapping("/detail/{id}")
-    public String showJob(@PathVariable("id") long id, Model model) {
+    public String movieDetails(@PathVariable("id") long id, Model model) {
         model.addAttribute("movie", movieRepository.findById(id).get());
         return "showmovie";
     }
     @RequestMapping("/update/{id}")
-    public String updateMovie ( @PathVariable("id") long id, Model model){
+    public String updateMovie( @PathVariable("id") long id, Model model){
         model.addAttribute("movie", movieRepository.findById(id).get());
         return "addmovie";
     }
 
     @RequestMapping("/delete/{id}")
-    public  String deleteCourse(@PathVariable("id") long id){
+    public  String deleteMovie(@PathVariable("id") long id){
         movieRepository.deleteById(id);
         return "listmovies";
     }
