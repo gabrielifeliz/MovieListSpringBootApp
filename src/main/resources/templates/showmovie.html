@@ -11,14 +11,14 @@
 <div class="container">
     <h1 class = "display-4">Movie Details:</h1>
     <ul class="list-group">
-        <li class="list-group-item"><strong>Director: </strong>
-            <span th:text="${movie.director}"></span></li>
         <li class="list-group-item"><strong>Title: </strong>
             <span th:text="${movie.title}"></span></li>
-        <li class="list-group-item"><strong>Plot Summary: </strong>
-            <span th:text="${movie.plot}"></span></li>
         <li class="list-group-item"><strong>Release Year: </strong>
             <span th:text="${movie.releaseYear}"></span></li>
+        <li class="list-group-item"><strong>Director: </strong>
+            <span th:text="${movie.director}"></span></li>
+        <li class="list-group-item"><strong>Plot Summary: </strong>
+            <span th:text="${movie.plot}"></span></li>
     </ul>
     <br/>
     <a th:href="@{/update/{id}(id=${movie.id})}" role="button">
